@@ -2035,6 +2035,7 @@ object frmPrincipal: TfrmPrincipal
         Size.Width = 62.000000000000000000
         Size.Height = 54.000000000000000000
         Size.PlatformDefault = False
+        OnClick = Image4Click
       end
     end
   end

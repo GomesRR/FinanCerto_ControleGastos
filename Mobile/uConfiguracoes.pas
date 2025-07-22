@@ -12,24 +12,29 @@ type
     Layout1: TLayout;
     Label7: TLabel;
     imgBack: TImage;
-    Rectangle2: TRectangle;
+    rectMenuEditarPerfil: TRectangle;
     Image1: TImage;
     Label1: TLabel;
     Image2: TImage;
-    Rectangle1: TRectangle;
+    rectMenuDesconectar: TRectangle;
     Image3: TImage;
     Label2: TLabel;
     Image4: TImage;
-    Rectangle3: TRectangle;
+    rectMenuAssinatura: TRectangle;
     Image5: TImage;
     Label3: TLabel;
     Image6: TImage;
-    Rectangle4: TRectangle;
+    rectMenuAlterarSenha: TRectangle;
     Image7: TImage;
     Label4: TLabel;
     Image8: TImage;
+    rectMenuCategorias: TRectangle;
+    Image9: TImage;
+    Label5: TLabel;
+    Image10: TImage;
     procedure imgBackClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure rectMenuCategoriasClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,6 +48,8 @@ implementation
 
 {$R *.fmx}
 
+uses uCategoria;
+
 procedure TfrmConfiguracoes.FormClose(Sender: TObject;
   var Action: TCloseAction);
 begin
@@ -53,6 +60,16 @@ end;
 procedure TfrmConfiguracoes.imgBackClick(Sender: TObject);
 begin
   close;
+end;
+
+procedure TfrmConfiguracoes.rectMenuCategoriasClick(Sender: TObject);
+begin
+  if not Assigned(frmCategoria) then
+  begin
+    Application.CreateForm(TFrmCategoria, frmCategoria);
+  end;
+
+  frmCategoria.Show;
 end;
 
 end.

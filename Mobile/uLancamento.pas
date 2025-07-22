@@ -27,6 +27,7 @@ type
     Label5: TLabel;
     Label6: TLabel;
     lvLancamentos: TListView;
+    Image1: TImage;
     procedure FormShow(Sender: TObject);
     procedure imgBackClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

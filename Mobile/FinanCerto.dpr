@@ -6,7 +6,8 @@ uses
   uLogin in 'uLogin.pas' {frmLogin},
   uPrincipal in 'uPrincipal.pas' {frmPrincipal},
   uLancamento in 'uLancamento.pas' {frmLancamento},
-  uConfiguracoes in 'uConfiguracoes.pas' {frmConfiguracoes};
+  uConfiguracoes in 'uConfiguracoes.pas' {frmConfiguracoes},
+  uLancamentoCad in 'uLancamentoCad.pas' {frmLancamentoCad};
 
 {$R *.res}
 
@@ -16,5 +17,6 @@ begin
   Application.CreateForm(TfrmLogin, frmLogin);
   Application.CreateForm(TfrmLancamento, frmLancamento);
   Application.CreateForm(TfrmConfiguracoes, frmConfiguracoes);
+  Application.CreateForm(TfrmLancamentoCad, frmLancamentoCad);
   Application.Run;
 end.

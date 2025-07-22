@@ -316,6 +316,10 @@
             <Form>frmConfiguracoes</Form>
             <FormType>fmx</FormType>
         </DCCReference>
+        <DCCReference Include="uLancamentoCad.pas">
+            <Form>frmLancamentoCad</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

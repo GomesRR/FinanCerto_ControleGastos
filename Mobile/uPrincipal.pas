@@ -42,6 +42,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure Label8Click(Sender: TObject);
     procedure imgConfiguracoesClick(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
   private
     { Private declarations }
     procedure AddLancamentoLv(id_lancamento: integer;
@@ -59,7 +60,7 @@ implementation
 
 {$R *.fmx}
 
-uses uLancamento, uConfiguracoes;
+uses uLancamento, uConfiguracoes, uLancamentoCad;
 
 procedure TfrmPrincipal.AddLancamentoLv(id_lancamento: integer;
                                         descricao, categoria, dt: String;
@@ -101,6 +102,16 @@ begin
   ListarUltimosLancamentos;
 end;
 
+
+procedure TfrmPrincipal.Image4Click(Sender: TObject);
+begin
+  if not Assigned(frmLancamentoCad) then
+ begin
+   Application.CreateForm(TFrmLancamentoCad, frmLancamentoCad);
+ end;
+
+ frmLancamentoCad.Show;
+end;
 
 procedure TfrmPrincipal.imgConfiguracoesClick(Sender: TObject);
 begin
